@@ -39,6 +39,7 @@ public class LibraryMenu : MonoBehaviour
         background.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
         content.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
         content.fontSize = Screen.height / 60;
+        inputField.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, 30.0f);
     }
     // Update is called once per frame
     void Update()
