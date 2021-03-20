@@ -21,3 +21,11 @@ You can navigate through all of the rooms and open your files directly from with
 ## Installation
 
 Use this link to install, you will find a Unity build just download and play the BabelDrive.exe:
+
+## Instructions
+
+Open the BabelDrive.exe application then enter the folder path you want to generate. Press Alt + Enter to enter windowed mode if you need.
+
+## Limitations
+
+Currently each folder in your folder structure can only contain a **<span style="color: red;">maximum of 300 folders</span>** with **<span style="color: red;">204 files max in each of them</span>**. This may change in the future. 
