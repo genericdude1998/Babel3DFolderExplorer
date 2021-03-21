@@ -29,3 +29,32 @@ Open the BabelDrive.exe application then enter the folder path you want to gener
 ## Limitations
 
 Currently each folder in your folder structure can only contain a **<span style="color: red;">maximum of 300 folders</span>** with **<span style="color: red;">204 files max in each of them</span>**. This may change in the future. 
+
+# Class References #
+
+* **Controls**
+	* `MouseLook.cs`	
+	* `PlayerMovement.cs`
+* **Library Generation**
+	* `LibraryArchitect.cs`	
+	* `LibraryBuilder.cs`
+	* `Node.cs`
+* **Menu**
+	* `ExceptionRaiser.cs`	
+	* `LibraryMenu.cs`
+	* `RootFolderPath.cs`
+	* `TerminalInteractible.cs`
+	* `TutorialTerminal.cs`
+* **Occlusion Stacks**
+	* `OcclusionCullingStackManager.cs`	
+	* `OcclusionCullingStacksManagerBuilder.cs`
+* **RoomManagement**
+	* `BoxDispatcher.cs`	
+	* `BoxMenu.cs`
+	* `FileBox.cs`
+	* `GridCell.cs`
+	* `LibraryTerminal.cs`
+	* `Room.cs`
+* **Misc**
+	* `God.cs`
+	* `Singleton.cs`
