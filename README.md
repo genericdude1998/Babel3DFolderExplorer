@@ -37,9 +37,15 @@ Currently each folder in your folder structure can only contain a **<span style=
 The application has four systems:
 
 * **Library Generation** is responsible for the creation of rooms and their placement in 3D as well as connecting them with corridors and stairs.
-* The **Occlusion System** is responsible to render only visible rooms and cull all rooms that are not in view.
+* **Occlusion System** is responsible for render only visible rooms and cull all rooms that are not in view.
 * **Room Management** is responsible for placing files in the shelves, keeping track of files present and open files when prompted. 
 * **Menu Management** is responsible for displaying the initial menu and provide Library Generation with the root folder of the library
+
+## Class association Diagram ##
+
+The class diagram shows how the application works when generating a library:
+
+![Class diagram UML](/diagrams/ApplicationClassesULM.jpg)
 
 
 # Class References #
