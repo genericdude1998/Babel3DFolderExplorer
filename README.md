@@ -30,9 +30,16 @@ Open the BabelDrive.exe application then enter the folder path you want to gener
 
 Currently each folder in your folder structure can only contain a **<span style="color: red;">maximum of 300 folders</span>** with **<span style="color: red;">204 files max in each of them</span>**. This may change in the future. 
 
-#System Overview#
+# System Overview #
 
 ![System overview UML](/diagrams/BabelContextModelBlack.jpg)
+
+The application has four systems:
+
+* Library Generation is responsible for the creation of rooms and their placement in 3D as well as connecting them with corridors and stairs.
+* The Occlusion System is responsible to render only visible rooms and cull all rooms that are not in view.
+* Room Management is responsible for placing files in the shelves, keeping track of files present and open files when prompted. 
+* Menu Management is responsible for displaying the initial menu and provide Library Generation with the root folder of the library
 
 
 # Class References #
