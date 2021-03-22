@@ -41,7 +41,7 @@ The application has four systems:
 * **Room Management** is responsible for placing files in the shelves, keeping track of files present and open files when prompted. 
 * **Menu Management** is responsible for displaying the initial menu and provide Library Generation with the root folder of the library
 
-## Class association Diagram ##
+## Class Association Diagram ##
 
 The class diagram shows how the application works when generating a library:
 
@@ -58,7 +58,7 @@ The class diagram shows how the application works when generating a library:
 	* `LibraryBuilder.cs`
 	* `Node.cs`
 * **Menu**
-	* `ExceptionRaiser.cs`	10:09 22/03/2021
+	* `ExceptionRaiser.cs`
 	* `LibraryMenu.cs`
 	* `RootFolderPath.cs`
 	* `TerminalInteractible.cs`
