@@ -36,10 +36,10 @@ Currently each folder in your folder structure can only contain a **<span style=
 
 The application has four systems:
 
-* Library Generation is responsible for the creation of rooms and their placement in 3D as well as connecting them with corridors and stairs.
-* The Occlusion System is responsible to render only visible rooms and cull all rooms that are not in view.
-* Room Management is responsible for placing files in the shelves, keeping track of files present and open files when prompted. 
-* Menu Management is responsible for displaying the initial menu and provide Library Generation with the root folder of the library
+* **Library Generation** is responsible for the creation of rooms and their placement in 3D as well as connecting them with corridors and stairs.
+* The **Occlusion System** is responsible to render only visible rooms and cull all rooms that are not in view.
+* **Room Management** is responsible for placing files in the shelves, keeping track of files present and open files when prompted. 
+* **Menu Management** is responsible for displaying the initial menu and provide Library Generation with the root folder of the library
 
 
 # Class References #
@@ -52,7 +52,7 @@ The application has four systems:
 	* `LibraryBuilder.cs`
 	* `Node.cs`
 * **Menu**
-	* `ExceptionRaiser.cs`	
+	* `ExceptionRaiser.cs`	10:09 22/03/2021
 	* `LibraryMenu.cs`
 	* `RootFolderPath.cs`
 	* `TerminalInteractible.cs`
