@@ -30,6 +30,11 @@ Open the BabelDrive.exe application then enter the folder path you want to gener
 
 Currently each folder in your folder structure can only contain a **<span style="color: red;">maximum of 300 folders</span>** with **<span style="color: red;">204 files max in each of them</span>**. This may change in the future. 
 
+#System Overview#
+
+![System overview UML](/diagrams/BabelContextModelBlack.jpg)
+
+
 # Class References #
 
 * **Controls**
@@ -58,3 +63,4 @@ Currently each folder in your folder structure can only contain a **<span style=
 * **Misc**
 	* `God.cs`
 	* `Singleton.cs`
+
