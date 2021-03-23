@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 
 public class God : Singleton<God>
 {
@@ -15,7 +16,18 @@ public class God : Singleton<God>
         exceptionRaiser.ExceptionRaiserInit();
 
         architect = Instantiate(architectGO).GetComponent<LibraryArchitect>();
-        architect.CreateBlueprint(); // this generates a blueprint
+
+        try
+        {
+            architect.CreateBlueprint();// this generates a blueprint
+        }
+
+        catch (UnauthorizedAccessException) 
+        {
+            Debug.Log("ACCESS DENIED!");
+        }
+
+        exceptionRaiser.folderExceptionRaised = true;
     }
 
     private void Start()
