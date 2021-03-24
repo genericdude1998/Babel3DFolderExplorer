@@ -5,10 +5,7 @@ using System.Linq;
 
 
 public class LibraryArchitect : MonoBehaviour
-{
-    private int maxNumberOfFoldersAllowed = 299;
-    private int maxNumberOfFilesInAFolderAllowed = 204;
-    
+{ 
     private ExceptionRaiser exceptionRaiser;
 
     public float sizeOfGapHorizontal = 12;// this is the distance on x axis between two neighbour rooms considering also the roof
@@ -43,34 +40,15 @@ public class LibraryArchitect : MonoBehaviour
 
         rootFolderPath = RootFolderPath.rootFolderPathString;
 
-        CheckIfTheFolderIsValid(rootFolderPath);
-
         generatedNodeList = new List<Node>();
         childrenOfRootFolderList = Directory.GetDirectories(rootFolderPath).ToList<string>();
         RootFolderInit(rootFolderPath, childrenOfRootFolderList);
         GenerateLibrary(childrenOfRootFolderList, Vector3.zero); count = 0;
         isBlueprintReady = true;
 
-
         System.DateTime end;
         end = System.DateTime.Now;
         Debug.Log("Architect ended in" + end.Subtract(start).ToString());
-
-
-        if (generatedNodeList.Count > maxNumberOfFoldersAllowed)
-        {
-            exceptionRaiser.maxNumberOfFoldersReached = true;
-        }   // folders
-
-
-        foreach (Node node in generatedNodeList) // files
-        {
-            if (node.listOfFilesNames.Count > maxNumberOfFilesInAFolderAllowed) 
-            {
-                exceptionRaiser.maxNumberOfFilesReached = true;
-                break;
-            }
-        }
     }
 
     void RootFolderInit(string rootFolderPath, List<string> childrenOfRootFolderList)
@@ -97,8 +75,6 @@ public class LibraryArchitect : MonoBehaviour
 
         foreach (string nameOfTheCurrentFolder in currentList)
         {
-
-            CheckIfTheFolderIsValid(nameOfTheCurrentFolder);
 
             bool isFolderAccessible = Directory.Exists(nameOfTheCurrentFolder);
 
@@ -149,8 +125,6 @@ public class LibraryArchitect : MonoBehaviour
                     pointer += new Vector3(m_distanceFirstFolderToNextSibling * sizeOfGapHorizontal, 0, 0);
 
                     m_nameOfNextSiblingFolder = currentList[currentList.IndexOf(nameOfTheCurrentFolder) + 1];
-
-                    CheckIfTheFolderIsValid(m_nameOfNextSiblingFolder);
 
                     int m_distanceSiblingToNextFolder = GetDistanceToNextSibling(m_nameOfNextSiblingFolder); count = 0; // this is used for siblings not first as a next node basis
 
@@ -207,14 +181,6 @@ public class LibraryArchitect : MonoBehaviour
         foreach (string filePath in filesPath)
         {
             targetNode.listOfFilesNames.Add(Path.GetFileName(filePath));
-        }
-    }
-
-    void CheckIfTheFolderIsValid(string nameOfTheFolder)
-    {
-        if (!Directory.Exists(nameOfTheFolder)) // if a folder is not accessible
-        {
-            exceptionRaiser.folderExceptionRaised = true; // RAISE EXCEPTION
         }
     }
 }
