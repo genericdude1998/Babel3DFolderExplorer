@@ -19,17 +19,7 @@ public class God : Singleton<God>
         exceptionRaiser = FindObjectOfType<ExceptionRaiser>();
         exceptionRaiser.ExceptionRaiserInit();
 
-        try // check if generation causes exceptions
-        {
-            architect.CreateBlueprint();// this generates a blueprint
-        }
-
-        catch (Exception) // this ensures both unauthorisedexceptions and directorynotfound exception are catched
-        {
-            exceptionRaiser.folderExceptionRaised = true;
-        }
-
-
+        CheckLibraryGenerationExceptions(); // this starts library generation procedures and also checks for exceptions
         CheckLibraryGenerationLimitations(architect); // checks if number of files and folders are within limits
     }
 
@@ -44,6 +34,19 @@ public class God : Singleton<God>
         }
     }
 
+    private void CheckLibraryGenerationExceptions() 
+    {
+        try // check if generation causes exceptions
+        {
+            architect.CreateBlueprint();// this generates a blueprint
+        }
+
+        catch (Exception) // this ensures both unauthorisedexceptions and directorynotfound exception are catched
+        {
+            exceptionRaiser.folderExceptionRaised = true;
+        }
+
+    }
 
     private void CheckLibraryGenerationLimitations(LibraryArchitect arch) 
     {
