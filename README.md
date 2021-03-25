@@ -20,11 +20,12 @@ You can navigate through all of the rooms and open your files directly from with
 
 ## Installation
 
-Use this link to install, you will find a Unity build just download and play the BabelDrive.exe:
+Go to the releases page. You will find different versions with a description.
 
 ## Instructions
 
 Open the BabelDrive.exe application then enter the folder path you want to generate. Press Alt + Enter to enter windowed mode if you need.
+Sometimes Windows SmartScreen will block the application, you can change the settings to disable Reputation-based protection.
 
 ## Limitations
 
