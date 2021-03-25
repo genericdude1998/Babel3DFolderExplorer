@@ -4,7 +4,7 @@ Welcome to Babel a new way of accessing and viewing your files!
 
 ## Why try Babel?
 
-Babel is an experimental folder explorer that generates a fully navigable 3D library where all of the files specified by you will appear.
+Babel is an experimental folder explorer that generates a fully navigable 3D library where all of the files specified by you will appear. Powered by Unity3D
 
 ### Babel rules:
 
